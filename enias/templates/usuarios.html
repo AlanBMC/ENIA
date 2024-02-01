@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block form %}
+
+<div class="input-container">
+    <form action="{% url 'salva_texto' %}" method="POST">{% csrf_token %}
+            <input type="hidden" name="id_pagina" value="{{ pagina.id }}">
+            <input type="hidden" name="username" value="{{ username }}">
+
+            <div class="tarefa">
+                <textarea class="" type="text" id="myInput"  placeholder="Digite '\ ' para opções..." name="texto" ></textarea>
+            </div>
+            <div id="myDropdown" class="dropdown">
+                <a href="#" id="h1">H1</a>
+                <a href="#" id="h2">H2</a>
+                <a href="" id="listaAlternada">Nova Pagina</a>
+                <!-- Adicione mais opções conforme necessário -->
+            </div>
+    </form>
+</div>
+{% endblock form %}

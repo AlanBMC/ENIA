@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    
+    text-align: center;
+    
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 200px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 4px;
+}
+
+section {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* ################## POSIÇÃO DO INPUT E DO DROPDOWN ################*/
+
+/* Estilo do container que envolve o input e o dropdown */
+.input-container {
+    position: relative; /* Essencial para posicionar corretamente o dropdown */
+    width: 100%; /* Usa toda a largura disponível */
+    max-width: 400px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilo para o input */
+#myInput {
+    display: block; /* Torna o elemento um bloco */
+    width: 100%; /* Faz com que o input ocupe toda a largura do container */
+    padding: 10px; /* Espaço interno para tornar o texto mais legível */
+    margin: 20px 0; /* Espaço acima e abaixo do input */
+    font-size: 1em; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda para o input */
+    border-radius: 4px; /* Cantos arredondados */
+}
+
+/* Estilo para o dropdown */
+.dropdown {
+    display: none; /* Oculto por padrão */
+    position: absolute; /* Posicionamento absoluto em relação ao container */
+    width: 100%; /* A mesma largura do input */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.041); /* Sombra para um efeito de elevação */
+    background-color: #f9f9f9; /* Cor de fundo */
+    border-radius: 4px; /* Cantos arredondados */
+    z-index: 1; /* Garante que o dropdown fique acima de outros elementos */
+}
+
+/* Estilo para os links dentro do dropdown */
+.dropdown a {
+    padding: 12px 16px; /* Espaço interno para cada opção */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    display: block; /* Faz cada link ocupar uma linha inteira */
+    color: black; /* Cor do texto */
+}
+
+/* Estilo para os links do dropdown ao passar o mouse */
+.dropdown a:hover {
+    background-color: #f1f1f1; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* ################## POSIÇÃO DO INPUT E DO DROPDOWN // END ################*/
+
+/* ##################### EXPANDIR O CONTEÚDO DO DROPDOWN /*/
