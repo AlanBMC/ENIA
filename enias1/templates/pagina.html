@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block aside %}
+
+<aside>
+    <h2>{{usuario}}</h2>
+    <img src="{% static 'imgs/eu.jpg' %}" alt="Imagem de Perfil" width="60px" height="75px"
+        style="display: block; border-radius: 120px;">
+    <h3>{{pagina}}</h3>
+    <a href="{{paginas_linkadas}}">{{paginas_usuarios}}</a>
+</aside>
+{% endblock aside %}
+
+{% block form %}
+
+<div class="input-container" id="input-container">
+    <form method="POST" id="input-form"> {% csrf_token %}
+
+
+        <div class="tarefa">
+
+            <input class="" type="hidden" id="myInput" placeholder="Olá {{nome}}Digite '\ ' para opções..."
+                name="texto">
+
+        </div>
+
+        <div id="myDropdown" class="dropdown">
+            <a href="#" id="h1">H1</a>
+            <a href="#" id="h2">H2</a>
+            <a href="" id="listaAlternada">Nova Pagina</a>
+            <!-- Adicione mais opções conforme necessário -->
+        </div>
+    </form>
+</div>
+{% endblock form %}
